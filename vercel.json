@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://your-backend-vercel-url.vercel.app/api/:path*"
+      "destination": "https://eventmanagement-backend-two.vercel.app/api/:path*"
     },
     {
       "source": "/socket.io/:path*",
-      "destination": "https://your-backend-vercel-url.vercel.app/socket.io/:path*"
+      "destination": "https://eventmanagement-backend-two.vercel.app/socket.io/:path*"
     },
     {
       "source": "/(.*)",
