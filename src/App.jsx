@@ -14,7 +14,7 @@ import Login from './pages/Login';
 import { Calendar, Mail, Globe } from 'lucide-react';
 
 function MainAppContent() {
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage, setCurrentPage] = useState('login');
   const [initialFilters, setInitialFilters] = useState({});
 
   // Helper to parse dynamic route parameters (e.g. "event-details:XYZ")
