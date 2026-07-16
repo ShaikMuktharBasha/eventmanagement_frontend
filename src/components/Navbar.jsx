@@ -244,6 +244,58 @@ export default function Navbar({ onNavigate, currentPage }) {
 
           {/* Mobile Menu Icon */}
           <div className="flex md:hidden items-center gap-3">
+            {user && (
+              <div className="relative">
+                <button
+                  onClick={() => setNotificationsOpen(!notificationsOpen)}
+                  className="relative rounded-full p-2 hover:bg-muted/80 text-muted-foreground transition-all"
+                >
+                  <Bell size={18} />
+                  {unreadCount > 0 && (
+                    <span className="absolute top-0.5 right-0.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-emerald-500 text-[8px] font-bold text-white">
+                      {unreadCount}
+                    </span>
+                  )}
+                </button>
+                {notificationsOpen && (
+                  <div className="absolute right-0 mt-2 w-72 rounded-xl border border-border bg-card p-3 shadow-xl glow-purple animate-fade-in text-card-foreground">
+                    <div className="flex items-center justify-between border-b border-border/50 pb-2 mb-2">
+                      <span className="font-semibold text-xs">Notifications</span>
+                      <span className="text-[10px] text-muted-foreground">{unreadCount} Unread</span>
+                    </div>
+                    <div className="max-h-48 overflow-y-auto space-y-2">
+                      {notifications.length === 0 ? (
+                        <div className="py-4 text-center text-[10px] text-muted-foreground">
+                          No notifications yet
+                        </div>
+                      ) : (
+                        notifications.map((notif) => (
+                          <div
+                            key={notif._id}
+                            className={`p-2 rounded-lg text-[10px] transition-colors flex justify-between gap-2 items-start ${
+                              notif.read ? 'bg-muted/30' : 'bg-violet-500/10 border-l-2 border-violet-500'
+                            }`}
+                          >
+                            <div>
+                              <h4 className="font-semibold">{notif.title}</h4>
+                              <p className="text-muted-foreground mt-0.5">{notif.message}</p>
+                            </div>
+                            {!notif.read && (
+                              <button
+                                onClick={() => handleMarkAsRead(notif._id)}
+                                className="text-emerald-500 hover:text-emerald-600 shrink-0 mt-0.5"
+                              >
+                                <Check size={12} />
+                              </button>
+                            )}
+                          </div>
+                        ))
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
             <button
               onClick={toggleTheme}
               className="rounded-full p-2 hover:bg-muted/80 text-muted-foreground"
