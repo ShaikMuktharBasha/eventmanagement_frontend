@@ -94,7 +94,7 @@ export default function Login({ onNavigate }) {
       <div className="flex flex-col lg:flex-row items-stretch justify-center gap-8 max-w-5xl w-full">
         
         {/* Left Side: Services & Project Info Banner */}
-        <div className="flex-1 p-8 rounded-3xl glass-card border border-border/40 shadow-2xl flex flex-col justify-between space-y-8 animate-fade-in text-card-foreground">
+        <div className="hidden lg:flex flex-1 p-8 rounded-3xl glass-card border border-border/40 shadow-2xl flex-col justify-between space-y-8 animate-fade-in text-card-foreground">
           <div className="space-y-6">
             <div className="space-y-2">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-violet-500/10 text-violet-500 border border-violet-500/20">
@@ -162,7 +162,7 @@ export default function Login({ onNavigate }) {
         </div>
 
         {/* Right Side: Login Card */}
-        <div className="w-full max-w-md p-8 rounded-3xl glass-card border border-border/40 shadow-2xl space-y-6 animate-fade-in text-card-foreground self-center relative backdrop-blur-xl shrink-0">
+        <div className="w-full max-w-md p-6 sm:p-8 rounded-3xl bg-transparent sm:glass-card border-none sm:border sm:border-border/40 shadow-none sm:shadow-2xl space-y-6 animate-fade-in text-card-foreground self-center relative backdrop-blur-none sm:backdrop-blur-xl shrink-0">
           
           {/* Header Brand */}
           <div className="text-center space-y-3">
