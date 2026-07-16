@@ -91,10 +91,10 @@ export default function Login({ onNavigate }) {
       <div className="absolute top-1/2 left-3/4 -z-10 h-[32rem] w-[32rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-600/10 blur-3xl animate-pulse duration-[10s]" />
       <div className="absolute bottom-1/4 left-1/4 -z-10 h-[24rem] w-[24rem] rounded-full bg-indigo-500/10 blur-3xl animate-pulse duration-[7s]" />
 
-      <div className="flex flex-col lg:flex-row items-stretch justify-center gap-8 max-w-5xl w-full">
+      <div className="flex flex-col xl:flex-row items-stretch justify-center gap-8 max-w-5xl w-full">
         
         {/* Left Side: Services & Project Info Banner */}
-        <div className="hidden lg:flex flex-1 p-8 rounded-3xl glass-card border border-border/40 shadow-2xl flex-col justify-between space-y-8 animate-fade-in text-card-foreground">
+        <div className="hidden xl:flex flex-1 p-8 rounded-3xl glass-card border border-border/40 shadow-2xl flex-col justify-between space-y-8 animate-fade-in text-card-foreground">
           <div className="space-y-6">
             <div className="space-y-2">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-violet-500/10 text-violet-500 border border-violet-500/20">
